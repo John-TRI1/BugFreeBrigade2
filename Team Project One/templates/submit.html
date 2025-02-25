@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Score for {{ game }}</title>
+</head>
+<body>
+    <h1>Submit Score for {{ game }}</h1>
+    <form action="/submit" method="post">
+
+        <input type="hidden" name="game" value="{{ game }}">
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+        <br><br>
+
+        <label for="score">Score:</label>
+        <input type="number" name="score" id="score" required>
+        <br><br>
+
+        <button type="submit">Submit Score</button>
+    </form>
+</body>
+</html>

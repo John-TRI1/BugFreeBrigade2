@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Leaderboard</title>
-    <link rel="stylesheet" href="static/style.css">
+    <title>{{ current_game }} Leaderboard</title>
 </head>
 <body>
-    <h1>Game Leaderboard</h1>
-    <table>
+    <h1>{{ current_game }} Leaderboard</h1>
+
+
+    <form method="get" action="/">
+        <label for="game">Select game:</label>
+        <select name="game" id="game" onchange="this.form.submit()">
+            {% for g in games %}
+                <option value="{{ g }}" {% if g == current_game %}selected{% endif %}>{{ g }}</option>
+            {% endfor %}
+        </select>
+    </form>
+
+
+    <table border="1" cellpadding="5" cellspacing="0">
         <tr>
-            <th>Rank</th>
-            <th>Player</th>
+            <th>Name</th>
             <th>Score</th>
         </tr>
-        {% for player in leaderboard %}
+        {% for entry in scores %}
         <tr>
-            <td>{{ player.rank }}</td>
-            <td>{{ player.name }}</td>
-            <td>{{ player.score }}</td>
+            <td>{{ entry.name }}</td>
+            <td>{{ entry.score }}</td>
         </tr>
-        {% end for %}
+        {% endfor %}
     </table>
+
+
+    <br>
+    <a href="/submit?game={{ current_game }}"><button>Add Score</button></a>
 </body>
 </html>

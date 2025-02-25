@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b4dcab4-6576-4c62-aae5-29da1a204277" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Team Project One/Info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Team Project One/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Team Project One/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Team Project One/templates/leaderboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Team Project One/templates/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Team Project One/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/Team Project One/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Team Project One/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Team Project One/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Team Project One/templates/leaderboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/Team Project One/templates/submit.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +96,10 @@
       <workItem from="1739928786336" duration="533000" />
       <workItem from="1740085057090" duration="2986000" />
       <workItem from="1740089558976" duration="109000" />
+      <workItem from="1740431518915" duration="11000" />
+      <workItem from="1740431642347" duration="67000" />
+      <workItem from="1740501823399" duration="372000" />
+      <workItem from="1740518546883" duration="1425000" />
     </task>
     <servers />
   </component>
