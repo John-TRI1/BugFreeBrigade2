@@ -81,5 +81,7 @@ graph TD;
 | `/submit`            | GET    | Show the score submission form                     | No                     |
 | `/submit`            | POST   | Submit a score to the leaderboard                   | No                     |
 | `/api/leaderboard`   | GET    | Return leaderboard data as JSON                    | No                     |
+| `/update-score`    | GET    | Show the form to update an existing score         | No                     |
+| `/update-score`    | POST   | Update an existing score in the database          | No                     |
 
 
