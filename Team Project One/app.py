@@ -46,5 +46,39 @@ def api_leaderboard():
     sorted_scores = sorted(scores, key=lambda x: x["score"], reverse=True)
     return jsonify({"game": game, "leaderboard": sorted_scores})
 
+#to the existing update scores
+@app.route("/api/leaderboard/<game>/<int:score_id>", methods=["PUT"])
+def update_score(game, score_id):
+    data = request.get_json()
+    new_score = data.get("score")
+
+    if game not in leaderboards:
+        return jsonify({"error": "Game not found"}), 404
+
+    if score_id < 0 or score_id >= len(leaderboards[game]):
+        return jsonify({"error": "Invalid score ID"}), 400
+
+    try:
+        leaderboards[game][score_id]["score"] = int(new_score)
+        return jsonify({"message": "Score updated successfully", "leaderboard": leaderboards[game]})
+    except ValueError:
+        return jsonify({"error": "Invalid score value"}), 400
+
+
+#to delete scores
+@app.route("/api/leaderboard/<game>/<int:score_id>", methods=["DELETE"])
+def delete_score(game, score_id):
+    if game not in leaderboards:
+        return jsonify({"error": "Game not found"}), 404
+
+    if score_id < 0 or score_id >= len(leaderboards[game]):
+        return jsonify({"error": "Invalid score ID"}), 400
+
+    remove_score = leaderboards[game].pop(score_id)
+    return jsonify({"message": "Score deleted successfully", "removed": remove_score, "leaderboard": leaderboards[game]})
+
+
+
+
 if __name__ == "__main__":
     app.run(debug=True)

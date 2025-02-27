@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
     <title>Submit Score for {{ game }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
     <h1>Submit Score for {{ game }}</h1>
     <form action="/submit" method="post">

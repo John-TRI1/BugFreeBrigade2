@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>{{ current_game }} Leaderboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
     <h1>{{ current_game }} Leaderboard</h1>
-
 
     <form method="get" action="/">
         <label for="game">Select game:</label>
@@ -15,7 +17,6 @@
             {% endfor %}
         </select>
     </form>
-
 
     <table border="1" cellpadding="5" cellspacing="0">
         <tr>
@@ -29,7 +30,6 @@
         </tr>
         {% endfor %}
     </table>
-
 
     <br>
     <a href="/submit?game={{ current_game }}"><button>Add Score</button></a>
