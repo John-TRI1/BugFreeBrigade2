@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>{{ current_game }} Leaderboard</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
@@ -25,7 +24,7 @@
         </tr>
         {% for entry in scores %}
         <tr>
-            <td>{{ entry.name }}</td>
+            <td>{{ entry.username }}</td>
             <td>{{ entry.score }}</td>
         </tr>
         {% endfor %}
