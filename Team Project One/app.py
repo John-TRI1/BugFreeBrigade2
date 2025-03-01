@@ -6,9 +6,9 @@ app = Flask(__name__)
 
 
 db = mysql.connector.connect(
-    host="leaderboard.czwwke00wit5.us-east-2.rds.amazonaws.com",
+    host="localhost",
     port=3306,
-    user="admin",
+    user="root",
     password="Blaster12",
     database="leaderboard"
 )
