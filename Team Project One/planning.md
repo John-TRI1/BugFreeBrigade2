@@ -2,6 +2,14 @@
 
 The Leaderboard Tracker application that we've developed allows users to submit their score for a game, track the  scores, and compare rankings with other players. 
 
+# Planning Process  
+
+## Cannon washington - Front-end Development
+## Aastha Mahajan - Back-end Development
+## John Richardson - Database - Back-end Development
+
+
+
 
 # Feature List
 
@@ -9,8 +17,8 @@ The Leaderboard Tracker application that we've developed allows users to submit 
 
 1. Game selection - Allows a user who enters the website to choose from a pre-defined list of games before submitting their score.
 2. Score submission - A User will enter their score for the game that they have chosen.
-3. User Rankings - Score are ranked from highest - lowest  based on the game chosen.
-4. Our Leaderboard a relatively simple yet defined table showing the score, name, and rank of a user.
+3. Sort the scores from highest-lowest
+4. Our Leaderboard a relatively simple yet defined table showing the score, name, and allowing CRUD functionality.
 
 ## Should have features
 
@@ -41,7 +49,6 @@ erDiagram
     USERS {
         int user_id PK
         string username
-        int rank
     }
 
     GAMES {
@@ -71,17 +78,31 @@ graph TD;
     
     SubmissionSuccess -->|Clicks 'View Leaderboard'| Start["Home Page (Leaderboard Displayed)"]
 
+    %% Updating a Score
+    Start -->|Clicks 'Update Score'| UpdateScore["Update Score Page"]
+    UpdateScore -->|Enters New Score| SaveUpdatedScore["Save Updated Score"] --> UpdateSuccess["Score Updated Successfully"]
+    UpdateSuccess -->|Back to Leaderboard| Start
+
+    %% Deleting a Score
+    Start -->|Clicks 'Delete Score'| DeleteScore["Score Deleted Successfully"]
+    DeleteScore -->|Back to Leaderboard| Start
+
 ```
+# API Endpoints
 
-# List of Endpoints
-
-| Endpoint             | Method | Description                                        | Authentication Required |
-|----------------------|--------|----------------------------------------------------|------------------------|
-| `/`                  | GET    | Display the leaderboard (homepage)                 | No                     |
-| `/submit`            | GET    | Show the score submission form                     | No                     |
-| `/submit`            | POST   | Submit a score to the leaderboard                   | No                     |
-| `/api/leaderboard`   | GET    | Return leaderboard data as JSON                    | No                     |
-| `/update-score`    | GET    | Show the form to update an existing score         | No                     |
-| `/update-score`    | POST   | Update an existing score in the database          | No                     |
+| Endpoint | Method | Description | Authentication Required |
+|----------|--------|-------------|--------------------------|
+| `/` | `GET` | Display the leaderboard (homepage) | No |
+| `/submit` | `GET` | Show the score submission form | No |
+| `/submit` | `POST` | Submit a score to the leaderboard | No |
+| `/api/leaderboard` | `GET` | Return leaderboard data as JSON | No |
+| `/api/games` | `GET` | Retrieve a list of all available games | No |
+| `/api/user-scores/<username>` | `GET` | Retrieve all scores for a specific user | No |
+| `/api/scores/<score_id>` | `GET` | Retrieve details of a specific score | No |
+| `/api/leaderboard/<game>/<score_id>` | `POST` | Delete a score from the leaderboard | No |
+| `/api/users/<user_id>` | `DELETE` | Delete a user from the database | No |
+| `/api/users/<user_id>` | `PUT` | Update a user's name | No |
+| `/update-score/<game>/<score_id>` | `GET` | Show the form to update an existing score | No |
+| `/update-score/<game>/<score_id>` | `POST` | Update an existing score in the database | No |
 
 

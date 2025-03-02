@@ -6,9 +6,9 @@ app = Flask(__name__)
 
 
 db = mysql.connector.connect(
-    host="localhost",
+    host="leaderboard.czwwke00wit5.us-east-2.rds.amazonaws.com",
     port=3306,
-    user="root",
+    user="admin",
     password="Blaster12",
     database="leaderboard"
 )
@@ -28,7 +28,7 @@ def index():
 
     game_id = game["game_id"]
 
-    # ✅ FIX: Added `score_id` to the SELECT query so that update & delete buttons work
+
     cursor.execute("""
             SELECT scores.score_id, users.username, scores.score 
             FROM scores
@@ -142,28 +142,47 @@ def api_leaderboard():
     return jsonify({"game": game_name, "leaderboard": leaderboard})
 
 
-@app.route("/api/leaderboard/<string:game>/<int:score_id>", methods=["POST", "DELETE"])
+@app.route("/api/leaderboard/<string:game>/<int:score_id>", methods=["POST"])
 def delete_score(game, score_id):
-    # Check if the game exists
-    cursor.execute("SELECT game_id FROM games WHERE game_name = %s", (game,))
-    game_data = cursor.fetchone()
-    if not game_data:
-        return jsonify({"error": "Game not found"}), 404
+    try:
 
-    game_id = game_data["game_id"]
+        cursor.execute("SELECT game_id FROM games WHERE game_name = %s", (game,))
+        game_data = cursor.fetchone()
+        if not game_data:
+            return jsonify({"error": "Game not found"}), 404
 
-    # Check if the score exists for the given game
-    cursor.execute("SELECT score_id FROM scores WHERE score_id = %s AND game_id = %s", (score_id, game_id))
-    score_data = cursor.fetchone()
-    if not score_data:
-        return jsonify({"error": "Score not found"}), 404
+        game_id = game_data["game_id"]
 
-    # Delete the score
-    cursor.execute("DELETE FROM scores WHERE score_id = %s", (score_id,))
-    db.commit()
 
-    # Redirect back to leaderboard after deletion
-    return redirect(f"/?game={game}")
+        cursor.execute("SELECT user_id FROM scores WHERE score_id = %s AND game_id = %s", (score_id, game_id))
+        score_data = cursor.fetchone()
+        if not score_data:
+            return jsonify({"error": "Score not found"}), 404
+
+        user_id = score_data["user_id"]
+
+
+        cursor.execute("DELETE FROM scores WHERE score_id = %s", (score_id,))
+        db.commit()
+
+
+        cursor.execute("SELECT COUNT(*) as count FROM scores WHERE user_id = %s", (user_id,))
+        result = cursor.fetchone()
+        if result["count"] == 0:
+
+            cursor.execute("DELETE FROM users WHERE user_id = %s", (user_id,))
+            db.commit()
+            print(f"User {user_id} deleted because they had no remaining scores.")
+
+        return redirect(f"/?game={game}")
+
+    except Exception as e:
+        db.rollback()
+        print(f"Error: {e}")
+        return jsonify({"error": "An error occurred"}), 500
+
+
+
 
 
 @app.route("/update-score/<string:game>/<int:score_id>", methods=["GET", "POST"])
