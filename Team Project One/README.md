@@ -89,10 +89,18 @@
 
 ### ^ I'm going to add a score in game1.
 
-![img.png](Screenshots/database1.png)
+![img.png](Screenshots/database15.png)
 
 ### ^ You can see that shawn has been correctly represented in the database. 
 
-![img_2.png](Screenshots/database3.png)
+![img.png](Screenshots/database10.png)
 
 ### ^ This shows that shawn has a user_id of 13 which was represented in users for game_id 1 which is shown in leaderboard and games and the proper score as well.
+
+![img.png](Screenshots/database 8.png)
+
+### ^ Deleting shawn from frontend
+
+![img_1.png](Screenshots/database7.png)
+
+### ^ Deletion reflected in database
