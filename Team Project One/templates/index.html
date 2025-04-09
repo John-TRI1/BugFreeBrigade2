@@ -18,6 +18,14 @@
         </select>
     </form>
 
+    <!-- Search by name form -->
+    <form method="get" action="/" style="margin-bottom: 15px;">
+    <input type="hidden" name="game" value="{{ current_game }}">
+    <label for="search">Search by Name:</label>
+    <input type="text" id="search" name="search" value="{{ request.args.get('search', '') }}">
+    <button type="submit">Search</button>
+    </form>
+
     <table border="1" cellpadding="5" cellspacing="0">
     <tr>
         <th>Name</th>
