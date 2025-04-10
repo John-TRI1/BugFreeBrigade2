@@ -59,3 +59,32 @@ tr:hover {
     background-color: #ddd;
     transition: 0.3s;
 }
+
+
+/*for search bar*/
+#search {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+    width: 200px;
+}
+
+form[action="/"] label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+form[action="/"] button[type="submit"] {
+    padding: 8px 16px;
+    background-color: #45A049FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+form[action="/"] button[type="submit"]:hover {
+    background-color: #0056b3;
+}

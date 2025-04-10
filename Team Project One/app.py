@@ -19,6 +19,7 @@ cursor = db.cursor(dictionary=True)
 @app.route("/")
 def index():
     game_name = request.args.get('game', 'game1')
+    search_query = request.args.get('search', '').strip().lower()  # <-- new
 
     cursor.execute("SELECT game_id FROM games WHERE game_name = %s", (game_name,))
     game = cursor.fetchone()
@@ -28,8 +29,16 @@ def index():
 
     game_id = game["game_id"]
 
-
-    cursor.execute("""
+    if search_query:
+        cursor.execute("""
+            SELECT scores.score_id, users.username, scores.score 
+            FROM scores
+            JOIN users ON scores.user_id = users.user_id
+            WHERE scores.game_id = %s AND LOWER(users.username) LIKE %s
+            ORDER BY scores.score DESC
+        """, (game_id, f"%{search_query}%"))
+    else:
+        cursor.execute("""
             SELECT scores.score_id, users.username, scores.score 
             FROM scores
             JOIN users ON scores.user_id = users.user_id
@@ -43,7 +52,6 @@ def index():
     games = [row["game_name"] for row in cursor.fetchall()]
 
     return render_template("index.html", scores=scores, games=games, current_game=game_name)
-
 
 @app.route("/submit", methods=["GET"])
 def submit_form():
@@ -180,9 +188,6 @@ def delete_score(game, score_id):
         db.rollback()
         print(f"Error: {e}")
         return jsonify({"error": "An error occurred"}), 500
-
-
-
 
 
 @app.route("/update-score/<string:game>/<int:score_id>", methods=["GET", "POST"])
