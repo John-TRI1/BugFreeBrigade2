@@ -9,6 +9,10 @@ The Leaderboard Tracker application that we've developed allows users to submit 
 ## John Richardson - Database - Back-end Development
 
 
+# Task Assignments
+
+John Richardson developed the test suite and implemented analytical tools such as Bandit, Mypy, and Flake8 to perform both static and dynamic analysis. He also enhanced the scoreboard functionality by introducing a numerical rank display for each player listed.
+
 
 
 # Feature List
