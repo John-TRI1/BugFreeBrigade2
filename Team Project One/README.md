@@ -1,5 +1,7 @@
-## Project: Leaderboard Tracker
+# Project: Leaderboard Tracker
 
+
+## Overview
 
 ### Our Leaderboard Tracker is a Flask web app that allows users to:
 - View leaderboards for multiple games.
@@ -10,19 +12,25 @@
 
 ## Setup Instructions
 
-### To run our project, it is imperative that you have the necessary dependencies installed, such as:
-
-### - Pycharm (IDE)
-### - Flask - Used to run the web server
-### - Python - Used to execute the server. 
-
-
-### To start the website, open the 'Team Project One' folder in an IDE such as PyCharm. Ensure that Python and Flask are installed. Then, open the terminal by pressing Alt F12 and run the following command in the PyCharm terminal:
-
-### flask --app app run
+### Prerequisites
+- Python 3.x 
+- Flask (`pip install flask`) - Used to run the web server
+- PyCharm IDE (optional, used by our team)
 
 
-## Screenshots: 
+### Running the App
+1. Clone or download the repository.
+2. Open the `Team Project One` folder in PyCharm or your preferred IDE.
+3. Open the terminal (Alt + F12 in PyCharm).
+4. Run the following command:
+   ```bash
+   flask --app app run
+   ```
+5. Visit the local server address shown in your terminal (usually http://127.0.0.1:5000).
+
+
+## Screenshots:
+
 
 ![img.png](Screenshots/img.png)
 

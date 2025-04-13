@@ -19,6 +19,7 @@ The Leaderboard Tracker application that we've developed allows users to submit 
 2. Score submission - A User will enter their score for the game that they have chosen.
 3. Sort the scores from highest-lowest
 4. Our Leaderboard a relatively simple yet defined table showing the score, name, and allowing CRUD functionality.
+5. Search by Name feature, allows the users to filter the leaderboard by username. 
 
 ## Should have features
 
@@ -92,21 +93,15 @@ graph TD;
     DeleteScore -->|Back to Leaderboard| Start
 
 ```
-# API Endpoints
+
+## API Endpoints
 
 | Endpoint | Method | Description | Authentication Required |
 |----------|--------|-------------|--------------------------|
-| `/` | `GET` | Display the leaderboard (homepage) | No |
-| `/submit` | `GET` | Show the score submission form | No |
-| `/submit` | `POST` | Submit a score to the leaderboard | No |
-| `/api/leaderboard` | `GET` | Return leaderboard data as JSON | No |
-| `/api/games` | `GET` | Retrieve a list of all available games | No |
-| `/api/user-scores/<username>` | `GET` | Retrieve all scores for a specific user | No |
-| `/api/scores/<score_id>` | `GET` | Retrieve details of a specific score | No |
-| `/api/leaderboard/<game>/<score_id>` | `POST` | Delete a score from the leaderboard | No |
-| `/api/users/<user_id>` | `DELETE` | Delete a user from the database | No |
-| `/api/users/<user_id>` | `PUT` | Update a user's name | No |
-| `/update-score/<game>/<score_id>` | `GET` | Show the form to update an existing score | No |
-| `/update-score/<game>/<score_id>` | `POST` | Update an existing score in the database | No |
-
-
+| `/` | GET | Display the leaderboard with optional game selection and search by username | No |
+| `/submit` | GET | Show the score submission form | No |
+| `/submit` | POST | Submit a new score to the leaderboard | No |
+| `/api/leaderboard` | GET | Return leaderboard data as JSON (for a selected game) | No |
+| `/api/leaderboard/<game>/<score_id>` | POST | Delete a specific score from the leaderboard | No |
+| `/update-score/<game>/<score_id>` | GET | Show the form to update an existing score | No |
+| `/update-score/<game>/<score_id>` | POST | Update an existing score in the database | No |
