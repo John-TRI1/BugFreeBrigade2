@@ -1,6 +1,12 @@
 ## Project: Leaderboard Tracker
 
-### Our Leaderboard Tracker allows users to view the names of players who have submitted their scores for  games available in the dropdown menu.
+
+### Our Leaderboard Tracker is a Flask web app that allows users to:
+- View leaderboards for multiple games.
+- Submit new scores for a selected game.
+- Update or delete existing scores.
+- Search for players by name in a selected game.
+
 
 ## Setup Instructions
 
@@ -104,3 +110,11 @@
 ![img_1.png](Screenshots/database7.png)
 
 ### ^ Deletion reflected in database
+
+![search_bar1.jpeg](Screenshots/search_bar1.jpeg)
+
+### ^ Using the search bar to filter players in game2
+
+![search_bar2.jpeg](Screenshots/search_bar2.jpeg)
+
+### ^ Search result showing only the player matching the name.
