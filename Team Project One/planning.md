@@ -32,6 +32,10 @@ The Leaderboard Tracker application that we've developed allows users to submit 
 2. Filter/Search Scores - Users can search for their name in the leaderboard. 
 3. Top 3 Highlighted - Visually highlight the top 3 scores.  
 
+## New Features
+
+1. Search Bar - Allows user to search for specific users
+2. CSS Additions - Favicon
 
 # User Stories 
 
