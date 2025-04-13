@@ -20,35 +20,37 @@
 
     <!-- Search by name form -->
     <form method="get" action="/" style="margin-bottom: 15px;">
-    <input type="hidden" name="game" value="{{ current_game }}">
-    <label for="search">Search by Name:</label>
-    <input type="text" id="search" name="search" value="{{ request.args.get('search', '') }}">
-    <button type="submit">Search</button>
+        <input type="hidden" name="game" value="{{ current_game }}">
+        <label for="search">Search by Name:</label>
+        <input type="text" id="search" name="search" value="{{ request.args.get('search', '') }}">
+        <button type="submit">Search</button>
     </form>
 
     <table border="1" cellpadding="5" cellspacing="0">
-    <tr>
-        <th>Name</th>
-        <th>Score</th>
-        <th>Actions</th>
-    </tr>
-    {% for entry in scores %}
-    <tr>
-        <td>{{ entry.username }}</td>
-        <td>{{ entry.score }}</td>
-        <td>
-            <!-- Update Button -->
-            <a href="/update-score/{{ current_game }}/{{ entry.score_id }}">
-                <button type="button">Update</button>
-            </a>
+        <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Score</th>
+            <th>Actions</th>
+        </tr>
+        {% for entry in scores %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ entry.username | e }}</td>
+            <td>{{ entry.score }}</td>
+            <td>
+                <!-- Update Button -->
+                <a href="/update-score/{{ current_game }}/{{ entry.score_id }}">
+                    <button type="button">Update</button>
+                </a>
 
-            <!-- Delete Button -->
-            <form action="/api/leaderboard/{{ current_game }}/{{ entry.score_id }}" method="post" style="display:inline;">
-                <button type="submit" onclick="return confirm('Are you sure you want to delete this score?')">Delete</button>
-            </form>
-        </td>
-    </tr>
-    {% endfor %}
+                <!-- Delete Button -->
+                <form action="/api/leaderboard/{{ current_game }}/{{ entry.score_id }}" method="post" style="display:inline;">
+                    <button type="submit" onclick="return confirm('Are you sure you want to delete this score?')">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
     </table>
 
     <br>

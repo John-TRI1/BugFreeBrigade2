@@ -9,6 +9,10 @@ The Leaderboard Tracker application that we've developed allows users to submit 
 ## John Richardson - Database - Back-end Development
 
 
+# Task Assignments
+
+John Richardson developed the test suite and implemented analytical tools such as Bandit, Mypy, and Flake8 to perform both static and dynamic analysis. He also enhanced the scoreboard functionality by introducing a numerical rank display for each player listed.
+
 
 
 # Feature List
@@ -37,6 +41,7 @@ The Leaderboard Tracker application that we've developed allows users to submit 
 
 1. Search Bar - Allows user to search for specific users
 2. CSS Additions - Favicon
+3. Rank postion display
 
 # User Stories 
 
@@ -44,6 +49,21 @@ The Leaderboard Tracker application that we've developed allows users to submit 
 2. As a player, I want to submit my score after a game so that I can track my progression and improvement.
 3. As a developer, I want to use an API endpoint to access leaderboard data so that I can integrate it with other applications.
 
+# Analysis tools
+
+## Static Analysis 
+
+Flake8 was used to check python code, programming errors, and complex constructs. 
+
+mypy performed type-checking to ensure safety in function calls and DB interactions
+
+## Dynamic Analysis
+
+bandit was used to scan for security vulnerabilities in the live code. 
+
+# Test Coverage
+
+![img.png](Screenshots/Testcoverage.png)
 
 # Database structure  
 
