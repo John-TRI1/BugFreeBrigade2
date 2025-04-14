@@ -11,9 +11,11 @@ The Leaderboard Tracker application that we've developed allows users to submit 
 
 # Task Assignments
 
-John Richardson developed the test suite and implemented analytical tools such as Bandit, Mypy, and Flake8 to perform both static and dynamic analysis. He also enhanced the scoreboard functionality by introducing a numerical rank display for each player listed.
+### John Richardson developed the test suite and implemented analytical tools such as Bandit, Mypy, and Flake8 to perform both static and dynamic analysis. He also enhanced the scoreboard functionality by introducing a numerical rank display for each player listed.
 
-Cannon Washington set-up the "Issues" in Github and used the analytical tool built into PyCharm, "Qodana" to perform static analysis. 
+### Cannon Washington set-up the "Issues" in Github and used the analytical tool built into PyCharm, "Qodana" to perform static analysis. 
+
+### Aastha Mahajan implemented the search bar feature so users can search for names on the leaderboard, added a favicon to the web app, created the Kanban board using Trello with tasks and future backlog items, and updated the README with clear instructions and updated screenshots.
 
 # Feature List
 

@@ -119,10 +119,10 @@
 
 ### ^ Deletion reflected in database
 
-![search_bar1.jpeg](Screenshots/search_bar1.jpeg)
+![Search_bar1.jpeg](Screenshots/Search_bar1.jpeg)
 
 ### ^ Using the search bar to filter players in game2
 
-![search_bar2.jpeg](Screenshots/search_bar2.jpeg)
+![Search_bar2.jpeg](Screenshots/Search_bar2.jpeg)
 
 ### ^ Search result showing only the player matching the name.
