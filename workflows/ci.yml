@@ -35,6 +35,7 @@ jobs:
           pytest
 
   qodana:
+    name: Qodana Static Analysis
     runs-on: ubuntu-latest
 
     steps:
