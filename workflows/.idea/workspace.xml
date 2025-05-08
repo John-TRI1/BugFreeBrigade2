@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b085cd6c-ff2e-4103-b794-5cfb3a7e1c2a" name="Changes" comment="Fix: update Qodana action to working version">
+      <change beforePath="$PROJECT_DIR$/../Team Project One/Screenshots/Search_bar1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../Team Project One/Screenshots/Search_bar1.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Team Project One/Screenshots/Search_bar2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/../Team Project One/Screenshots/Search_bar2.jpeg" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "John-TRI1"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/John-TRI1/Bug-Free-Brigade.git",
+    "accountId": "07938e76-f8e6-4c17-a9ab-e8ad0d952f33"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2woVoFsZCYaIolJGTjzl6XRNJId" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Jtr28/Bug-Free-Brigade/.github/workflows/ci.yml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="workflows" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-PY-243.23654.177" />
+        <option value="bundled-python-sdk-91d3a02ef49d-43b77aa2d136-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.23654.177" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b085cd6c-ff2e-4103-b794-5cfb3a7e1c2a" name="Changes" comment="" />
+      <created>1746708086203</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746708086203</updated>
+      <workItem from="1746708087290" duration="3591000" />
+    </task>
+    <task id="LOCAL-00001" summary="ci.yml, focusing on testing.">
+      <option name="closed" value="true" />
+      <created>1746709456469</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746709456470</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fix: update Qodana action to working version">
+      <option name="closed" value="true" />
+      <created>1746710176024</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746710176024</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fix: update Qodana action to working version">
+      <option name="closed" value="true" />
+      <created>1746710236399</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746710236399</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fix: update Qodana action to working version">
+      <option name="closed" value="true" />
+      <created>1746710308399</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746710308399</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fix: update Qodana action to working version">
+      <option name="closed" value="true" />
+      <created>1746710374232</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746710374232</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fix: update Qodana action to working version">
+      <option name="closed" value="true" />
+      <created>1746710466887</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1746710466887</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fix: update Qodana action to working version">
+      <option name="closed" value="true" />
+      <created>1746710578130</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1746710578130</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fix: update Qodana action to working version">
+      <option name="closed" value="true" />
+      <created>1746710611866</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1746710611866</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fix: update Qodana action to working version">
+      <option name="closed" value="true" />
+      <created>1746710765917</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1746710765917</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fix: update Qodana action to working version">
+      <option name="closed" value="true" />
+      <created>1746710879681</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1746710879681</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fix: update Qodana action to working version">
+      <option name="closed" value="true" />
+      <created>1746710944698</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1746710944698</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fix: update Qodana action to working version">
+      <option name="closed" value="true" />
+      <created>1746711052061</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1746711052061</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fix: update Qodana action to working version">
+      <option name="closed" value="true" />
+      <created>1746711125135</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1746711125135</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ci.yml, focusing on testing." />
+    <MESSAGE value="Fix: update Qodana action to working version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: update Qodana action to working version" />
+  </component>
+</project>
