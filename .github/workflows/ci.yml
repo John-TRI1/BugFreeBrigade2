@@ -36,19 +36,19 @@ jobs:
           pytest
 
   qodana:
-     name: Qodana Static Analysis
-     runs-on: ubuntu-latest
+    name: Qodana Static Analysis
+    runs-on: ubuntu-latest
 
-     steps:
-       - name: Checkout code
-         uses: actions/checkout@v3
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-       - name: Run Qodana (Cloud)
-         uses: JetBrains/qodana-action@v2025.1
-         with:
-           pr-mode: false
-+         
-+          image: jetbrains/qodana-python:2025.1
-         env:
-           QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
-           QODANA_ENDPOINT: https://qodana.cloud
+      - name: Run Qodana (Community)
+        uses: JetBrains/qodana-action@v2025.1
+        with:
+          pr-mode: false
+          edition: community
+          image: jetbrains/qodana-python:2025.1
+        env:
+          QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
+          QODANA_ENDPOINT: https://qodana.cloud
