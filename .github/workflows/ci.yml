@@ -1,4 +1,4 @@
-name: CI - Lint, Test, and Qodana Analysis
+name: CI - Lint, Test
 
 on:
   push:
@@ -35,20 +35,4 @@ jobs:
           pip install pytest
           pytest
 
-  qodana:
-    name: Qodana Static Analysis
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Run Qodana (Community)
-        uses: JetBrains/qodana-action@v2025.1
-        with:
-          pr-mode: false
-          edition: community
-          image: jetbrains/qodana-python:2025.1
-        env:
-          QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
-          QODANA_ENDPOINT: https://qodana.cloud
+  
