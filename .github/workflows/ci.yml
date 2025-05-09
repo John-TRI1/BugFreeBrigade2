@@ -35,22 +35,18 @@ jobs:
           pip install pytest
           pytest
 
- qodana:
-     name: Qodana Static Analysis
-     runs-on: ubuntu-latest
+  qodana:
+    name: Qodana Static Analysis
+    runs-on: ubuntu-latest
 
-     steps:
-       - name: Checkout code
-         uses: actions/checkout@v3
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
--      - name: Run Qodana
--        uses: JetBrains/qodana-action@v2023.3.1
--        with:
--          pr-mode: false
-+      - name: Run Qodana (Cloud)
-+        uses: JetBrains/qodana-action@v2025.1
-+        with:
-+          pr-mode: false
-+        env:
-+          QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
-+          QODANA_ENDPOINT: https://qodana.cloud
+      - name: Run Qodana (Cloud)
+        uses: JetBrains/qodana-action@v2025.1
+        with:
+          pr-mode: false
+        env:
+          QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
+          QODANA_ENDPOINT: https://qodana.cloud
